@@ -1,5 +1,6 @@
 import 'package:flight_booking/style/colors.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class CustomButton extends StatelessWidget {
   final String text;
@@ -10,15 +11,21 @@ class CustomButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialButton(
-      onPressed: () {},
+      onPressed: onPressed,
       color: AppColor.black,
-      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(6)),
-      padding: EdgeInsets.symmetric(horizontal: 14, vertical: 14),
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
+      padding: EdgeInsets.symmetric(horizontal: 14, vertical: 16),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          Text(text, style: TextStyle(color: Colors.white, fontSize: 14)),
-          Icon(Icons.arrow_forward_ios, color: Colors.white, size: 14),
+          Text(
+            text,
+            style: GoogleFonts.poppins(
+              color: Colors.white,
+              fontSize: 14,
+            ),
+          ),
+          Icon(Icons.double_arrow_sharp, color: Colors.white, size: 18)
         ],
       ),
     );

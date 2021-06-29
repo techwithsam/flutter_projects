@@ -19,23 +19,25 @@ class StartScreen extends StatelessWidget {
                 image: AssetImage(AppImages.planWing), fit: BoxFit.fill),
           ),
           child: Padding(
-            padding: const EdgeInsets.fromLTRB(12, 15, 12, 40),
+            padding: const EdgeInsets.fromLTRB(12, 15, 12, 10),
             child: Column(
-              mainAxisAlignment: MainAxisAlignment.end,
+              mainAxisAlignment: MainAxisAlignment.start,
               children: [
                 Padding(
-                  padding: EdgeInsets.only(left: 22, right: 22, bottom: 30),
+                  padding: EdgeInsets.only(left: 15, right: 15, bottom: 10),
                   child: Column(
                     children: [
-                      Text(
-                        'Discover Best Dates To Fly',
-                        textAlign: TextAlign.center,
-                        style: AppTextStyle.titleStyle,
-                      ),
-                      Text('Booking and saving made easy')
+                      Text('Discover', style: AppTextStyle().titleStyle),
+                      FittedBox(
+                          child: Text('Best Dates',
+                              style: AppTextStyle().titleStyle)),
+                      Text('To Fly', style: AppTextStyle().titleStyle),
+                      Text('Booking and saving made easy',
+                          style: AppTextStyle().subStyle)
                     ],
                   ),
                 ),
+                Spacer(),
                 CustomButton(text: 'Get Started', onPressed: () {})
               ],
             ),
