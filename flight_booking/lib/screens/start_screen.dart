@@ -1,3 +1,4 @@
+import 'package:flight_booking/screens/homepage.dart';
 import 'package:flight_booking/style/images.dart';
 import 'package:flight_booking/style/text_style.dart';
 import 'package:flight_booking/widgets/custom_button.dart';
@@ -38,7 +39,14 @@ class StartScreen extends StatelessWidget {
                   ),
                 ),
                 Spacer(),
-                CustomButton(text: 'Get Started', onPressed: () {})
+                CustomButton(
+                    text: 'Get Started',
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (_) => HomePage()),
+                      );
+                    })
               ],
             ),
           ),
