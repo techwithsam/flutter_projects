@@ -13,4 +13,10 @@ class AppTextStyle {
     fontSize: 12,
     color: AppColor.grey,
   );
+
+  final wordStyle = GoogleFonts.robotoSlab(
+    fontSize: 35,
+    fontWeight: FontWeight.w600,
+    height: 1.1,
+  );
 }
