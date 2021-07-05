@@ -42,10 +42,9 @@ class StartScreen extends StatelessWidget {
                 CustomButton(
                     text: 'Get Started',
                     onPressed: () {
-                      Navigator.push(
-                        context,
+                      Navigator.of(context).push(
                         MaterialPageRoute(
-                          builder: (_) => HomePage(),
+                          builder: (context) => HomePage(),
                         ),
                       );
                     })
