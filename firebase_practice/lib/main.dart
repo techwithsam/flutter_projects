@@ -1,5 +1,3 @@
-import 'dart:io';
-
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_practice/auth/google_signin.dart';
@@ -80,15 +78,15 @@ class _MyHomePageState extends State<MyHomePage> {
     );
   }
 
-  void _signin() {
-    FirebaseAuth.instance.authStateChanges().listen((User? user) {
-      if (user == null) {
-        print('User is currently signed out!');
-      } else {
-        print('User is signed in!');
-      }
-    });
-  }
+  // void _signin() {
+  //   FirebaseAuth.instance.authStateChanges().listen((User? user) {
+  //     if (user == null) {
+  //       print('User is currently signed out!');
+  //     } else {
+  //       print('User is signed in!');
+  //     }
+  //   });
+  // }
 }
 
 // firebase deploy --only hosting:samade
